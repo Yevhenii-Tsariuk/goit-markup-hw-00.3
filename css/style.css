@@ -1,20 +1,65 @@
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
-  background-color: #fff;
+  background: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 ol,
 ul {
   list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1158px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.header-container {
+  display: flex;
 }
 
 .header-novigation {
+  display: flex;
+  align-items: center;
 }
 
 .header-logo-link {
@@ -32,6 +77,9 @@ a {
 }
 
 .header-menu-list {
+  display: flex;
+  gap: 40px;
+  margin-left: 76px;
 }
 
 .header-menu-item {
@@ -55,6 +103,9 @@ focus {
 }
 
 .address-contacts-list {
+  display: flex;
+  margin-left: 332px;
+  gap: 40px;
 }
 
 .address-contacts-item {
@@ -73,6 +124,8 @@ focus {
 }
 .content {
   background-color: #2e2f42;
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 
 .content-title {
@@ -82,6 +135,11 @@ focus {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
+  width: 496px;
+  height: 120px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 48px;
 }
 
 .content-btn {
@@ -93,6 +151,17 @@ focus {
   color: #fff;
   cursor: pointer;
   background: #4d5ae5;
+  border: none;
+  gap: 10px;
+
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 10px;
+  border-radius: 4px;
+  padding: 16px 32px;
 }
 
 .content-btn:hover,
@@ -101,12 +170,27 @@ focus {
 }
 
 .slogan {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .slogan-list {
+  display: flex;
+  padding-left: 15px;
 }
 
 .slogan-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 8px;
+  width: 264px;
+  height: 104px;
+  margin-right: 24px;
+}
+.slogan-item:last-child {
+  margin-right: 0;
 }
 
 .slogan-subtitle {
@@ -127,6 +211,8 @@ focus {
 
 .team {
   background: #f4f4fd;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .team-title {
@@ -137,13 +223,36 @@ focus {
   text-transform: capitalize;
   text-align: center;
   color: #2e2f42;
+  margin-bottom: 72px;
 }
 .team-list {
+  display: flex;
+  gap: 24px;
+  padding-left: 15px;
+  flex-wrap: wrap;
 }
 .team-item {
   background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+  border-radius: 0 0 4px 4px;
+  padding: 0px 0px 32px 0px;
+
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 .team-image {
+}
+
+.team-subtitle-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
 }
 .team-subtitle {
   font-weight: 500;
@@ -162,7 +271,17 @@ focus {
   color: #434455;
 }
 
+.team-subtitle .team-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .portfolio {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .portfolio-title {
   font-weight: 700;
@@ -172,12 +291,36 @@ focus {
   text-transform: capitalize;
   text-align: center;
   color: #2e2f42;
+  margin-bottom: 72px;
 }
 .portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  row-gap: 0;
 }
 .portfolio-item {
+  border: 1px solid #e7e9fc;
+  margin-bottom: 48px;
+  width: 360px;
+}
+
+.portfolio-item:nth-child(1n + 4) {
+  margin-bottom: 0;
 }
 .portfolio-image {
+}
+
+.portfolio-subtitle-text {
+  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
+  padding: 32px 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
 }
 .portfolio-subtitle {
   font-weight: 500;
@@ -196,6 +339,13 @@ focus {
 
 .footer {
   background: #2e2f42;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.container-footer {
+  width: 264px;
+  height: 112px;
 }
 .footer-logo-link {
   font-family: "Raleway", sans-serif;
