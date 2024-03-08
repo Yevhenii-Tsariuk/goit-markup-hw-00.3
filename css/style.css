@@ -134,6 +134,7 @@ focus {
 }
 
 .content-btn {
+  display: block;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -144,14 +145,10 @@ focus {
   background: #4d5ae5;
   border: none;
   gap: 10px;
-  display: block;
+
   min-width: 169px;
   margin: 0 auto;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: row;
-  gap: 10px;
+
   border-radius: 4px;
   padding: 16px 32px;
 }
@@ -170,7 +167,7 @@ focus {
   position: absolute;
   width: 1px;
   height: 1px;
-  margin: 0;
+  margin: -1px;
   border: 0;
   padding: 0;
   white-space: nowrap;
@@ -306,7 +303,7 @@ focus {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  column-gap: 24px;
 
   row-gap: 0;
 }
